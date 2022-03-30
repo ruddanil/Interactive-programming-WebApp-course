@@ -23,7 +23,6 @@
                 документу, и может обеспечить динамическую интерактивность на веб-сайтах. Его разработал Brendan Eich,
                 сооснователь проекта Mozilla, Mozilla Foundation и Mozilla Corporation.
             </div>
-
         </div>
         <div class="info-block" id="block2">
             <div class="subheader">
@@ -46,7 +45,237 @@
             </div>
         </div>
     </div>
+    <div id="header-2">
+        Примеры задач, решаемых при помощи JavaScript
+    </div>
+    <div class="examples">
+        <div class="ex" id="exC0">
+            <div class="subheader-ex" onclick="openEx0()">
+                Приветствие пользователя
+            </div>
+            <div class="text_but" id="ex0">
+                <div class="text-ex">
+                    prompt(), alert(), sessionStorage, trim() и while
+                </div>
+                <div class="button" onclick="example0()">
+                    Запустить
+                </div>
+            </div>
+        </div>
+        <div class="ex" id="exC1">
+            <div class="subheader-ex" onclick="openEx1()">
+                Площадь треугольника
+            </div>
+            <div class="text_but" id="ex1">
+                <div class="text-ex">
+                    parseInt(), prompt(), alert()
+                </div>
+                <div class="button" onclick="example1()">
+                    Запустить
+                </div>
+            </div>
+        </div>
+        <div class="ex" id="exC2">
+            <div class="subheader-ex" onclick="openEx2()">
+                Сравнение длины строк
+            </div>
+            <div class="text_but" id="ex2">
+                <div class="text-ex">
+                    prompt(), alert()
+                </div>
+                <div class="button" onclick="example2()">
+                    Запустить
+                </div>
+            </div>
+        </div>
+        <div class="ex" id="exC3">
+            <div class="subheader-ex" onclick="openEx3()">
+                Максимум и минимум в массиве
+            </div>
+            <div class="text_but" id="ex3">
+                <div class="text-ex">
+                    prompt(), alert(), push(), pop(), max(), min(), isNaN и for
+                </div>
+                <div class="button" onclick="example3()">
+                    Запустить
+                </div>
+            </div>
+        </div>
+        <div class="ex" id="exC4">
+            <div class="subheader-ex" onclick="openEx4()">
+                Создание нового таймера
+            </div>
+            <div class="text_but" id="ex4">
+                <div class="text-ex">
+                    Таймер с заданным функционалом
+                </div>
+                <div class="button" onclick="example4()">
+                    Запустить
+                </div>
+            </div>
+        </div>
+        <div class="ex" id="exC5">
+            <div class="subheader-ex" onclick="openEx5()">
+                Появляющаяся заставка
+            </div>
+            <div class="text_but" id="ex5">
+                <div class="text-ex">
+                    Таймер с заданным функционалом
+                </div>
+                <div class="button" onclick="example5()">
+                    Запустить
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="timer" id="timer">
+        <div id="start" onclick="startTimer()">СТАРТ</div>
+        <div class="time" id="time">0:0</div>
+        <div id="stop" onclick="stopTimer()">СТОП</div>
+    </div>
 
+    <div class="scoreTest" id="scoreTest">0/10</div>
+    <div class="test">
+        <div class="question">
+            <div class="textQ">Когда появился JavaScript?</div>
+            <div class="answers">
+                <input type="radio" id="a1" name="q1" value="0" />1995
+            </div>
+            <div class="answers"><input type="radio" id="a" name="q1" />1990</div>
+            <div class="answers"><input type="radio" id="a" name="q1" />1991</div>
+            <div class="answers"><input type="radio" id="a" name="q1" />1996</div>
+            <div class="buttonQ" onclick="testButt(1)">Ответить</div>
+        </div>
+        <div class="question">
+            <div class="textQ">JavaScript язык, используемый в ...</div>
+            <div class="answers">
+                <input type="radio" id="a2" name="q2" value="0" />веб-приложениях
+            </div>
+            <div class="answers">
+                <input type="radio" id="a" name="q2" />базах данных
+            </div>
+            <div class="answers"><input type="radio" id="a" name="q2" />ИИ</div>
+            <div class="answers">
+                <input type="radio" id="a" name="q2" />настройка сервера
+            </div>
+            <div class="buttonQ" onclick="testButt(2)">Ответить</div>
+        </div>
+        <div class="question">
+            <div class="textQ">Тип переменной в JavaScript</div>
+            <div class="answers"><input type="radio" id="a" name="q3" />int</div>
+            <div class="answers">
+                <input type="radio" id="a3" name="q3" value="0" />let
+            </div>
+            <div class="answers"><input type="radio" id="a" name="q3" />char</div>
+            <div class="answers">
+                <input type="radio" id="a" name="q3" />ArrayList
+            </div>
+            <div class="buttonQ" onclick="testButt(3)">Ответить</div>
+        </div>
+        <div class="question">
+            <div class="textQ">Что обозначает знак: &&</div>
+            <div class="answers">
+                <input type="radio" id="a" name="q4" />умножение
+            </div>
+            <div class="answers">
+                <input type="radio" id="a4" name="q4" value="0" />логическое И
+            </div>
+            <div class="answers">
+                <input type="radio" id="a" name="q4" />логическое ИЛИ
+            </div>
+            <div class="answers"><input type="radio" id="a" name="q4" />ошибку</div>
+            <div class="buttonQ" onclick="testButt(4)">Ответить</div>
+        </div>
+        <div class="question">
+            <div class="textQ">Запуск всплывающего окна:</div>
+            <div class="answers">
+                <input type="radio" id="a" name="q5" />нет варианта
+            </div>
+            <div class="answers">
+                <input type="radio" id="a" name="q5" />info("Hi")
+            </div>
+            <div class="answers">
+                <input type="radio" id="a5" name="q5" value="0" />alert("Hi")
+            </div>
+            <div class="answers">
+                <input type="radio" id="a" name="q5" />new alert ("Hi")
+            </div>
+            <div class="buttonQ" onclick="testButt(5)">Ответить</div>
+        </div>
+        <div class="question">
+            <div class="textQ">Выберите примитив из списка</div>
+            <div class="answers">
+                <input type="radio" id="a6" name="q6" value="0" />null
+            </div>
+            <div class="answers"><input type="radio" id="a" name="q6" />length</div>
+            <div class="answers"><input type="radio" id="a" name="q6" />Array</div>
+            <div class="answers"><input type="radio" id="a" name="q6" />Nan</div>
+            <div class="buttonQ" onclick="testButt(6)">Ответить</div>
+        </div>
+        <div class="question">
+            <div class="textQ">Директива const означает</div>
+            <div class="answers">
+                <input type="radio" id="a" name="q7" />область видимости
+            </div>
+            <div class="answers">
+                <input type="radio" id="a7" name="q7" value="0" />неизменямость
+            </div>
+            <div class="answers"><input type="radio" id="a" name="q7" />цвет</div>
+            <div class="answers"><input type="radio" id="a" name="q7" />шрифт</div>
+            <div class="buttonQ" onclick="testButt(7)">Ответить</div>
+        </div>
+        <div class="question">
+            <div class="textQ">Как обозначается ложное значение?</div>
+            <div class="answers"><input type="radio" id="a" name="q8" />Null</div>
+            <div class="answers"><input type="radio" id="a" name="q8" />Error</div>
+            <div class="answers">
+                <input type="radio" id="a8" name="q8" value="0" />Nan
+            </div>
+            <div class="answers">
+                <input type="radio" id="a" name="q8" />undefind
+            </div>
+            <div class="buttonQ" onclick="testButt(8)">Ответить</div>
+        </div>
+        <div class="question">
+            <div class="textQ">У какой директивы больше видимость?</div>
+            <div class="answers">
+                <input type="radio" id="a9" name="q9" value="0" />var
+            </div>
+            <div class="answers">
+                <input type="radio" id="a" name="q9" />let
+            </div>
+            <div class="buttonQ" onclick="testButt(9)">Ответить</div>
+        </div>
+        <div class="question">
+            <div class="textQ">Как у тебя дела?</div>
+            <div class="answers">
+                <input type="radio" id="a" name="q10" />Хорошо
+            </div>
+            <div class="answers">
+                <input type="radio" id="a" name="q10" />Плохо
+            </div>
+            <div class="answers">
+                <input type="radio" id="a10" name="q10" value="0" />Отлично
+            </div>
+            <div class="answers">
+                <input type="radio" id="a" name="q10" />Нормально
+            </div>
+            <div class="buttonQ" onclick="testButt(10)">Ответить</div>
+        </div>
+    </div>
+    <div class="end"></div>
+
+
+
+
+
+
+
+
+    <div class="screensaver" id="screensaver">
+        <div id="userName"></div>
+        <div id="currentDate"></div>
+    </div>
 
 </div>
 

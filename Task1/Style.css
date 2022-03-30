@@ -4,6 +4,7 @@
     margin: 0;
     font-family: RobotoCondensed;
 }
+
 .container {
     overflow: hidden;
 
@@ -22,29 +23,123 @@
     flex-wrap: wrap;
     justify-content: space-around;
 }
+
 .info-block {
     margin: 10px 20px 10px 20px;
     width: 450px;
 }
+
 .subheader {
     text-align: center;
     font-size: 30px;
     padding-bottom: 5px;
 }
+
 .text {
     text-align: justify;
+}
+
+#header-2 {
+    text-align: center;
+    font-size: 30px;
+    padding-top: 10px;
+    padding-bottom: 25px;
+}
+
+.examples {
+    display: flex;
+    /*flex-direction: column;*/
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.subheader-ex {
+    text-align: center;
+    font-size: 25px;
+    border: solid;
+}
+
+.subheader-ex:hover {
+    text-decoration: underline;
+    background-color: coral;
+    cursor: pointer;
+}
+
+.ex {
+    width: 230px;
+    margin-bottom: 15px;
+    border: none;
+}
+
+.text_but {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.text-ex {
+    text-align: center;
+    margin: 5px 5px 5px 5px;
+}
+
+.button {
+    background-color: deepskyblue;
+    color: white;
+    padding: 10px 32px;
+    text-align: center;
+    font-size: 19px;
+    margin: 5px 5px 5px 5px;
+    text-decoration: none;
+}
+
+.button:hover {
+    text-decoration: underline;
+    background-color: coral;
+    cursor: pointer;
+}
+
+.timer {
+    display: none;
     font-size: 20px;
+    justify-content: center;
 }
 
-#block1 {
-
+.time {
+    font-size: 45px;
+    width: 65px;
+    text-align: center;
 }
-#block2 {
-
+#start, #stop {
+    color: black;
+    padding: 10px 32px;
+    font-size: 25px;
 }
-#block3 {
-
+#start:hover,
+#stop:hover {
+    cursor: pointer;
 }
+
+.screensaver {
+    display: none;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background-image: url("src/img/JS.jpg");
+    text-align: center;
+    font-size: 200px;
+}
+
+#userName {
+    margin-top: 100px;
+    color: white;
+}
+
+#currentDate {
+    color: white;
+}
+
+
 
 @font-face {
     font-family: "RobotoCondensed";
