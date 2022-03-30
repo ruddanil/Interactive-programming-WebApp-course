@@ -7,7 +7,6 @@
 
 .container {
     overflow: hidden;
-
 }
 
 #header-1 {
@@ -48,7 +47,6 @@
 
 .examples {
     display: flex;
-    /*flex-direction: column;*/
     flex-wrap: wrap;
     justify-content: space-around;
 }
@@ -118,6 +116,38 @@
 #stop:hover {
     cursor: pointer;
 }
+.fake {
+    display: flex;
+    justify-content: center;
+}
+.test {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+}
+.question {
+    width: 380px;
+    border-top: solid;
+    border-left: solid;
+    border-right: solid;
+}
+.textQ {
+    font-weight: bold;
+}
+
+.scoreTest {
+    align-self: center;
+}
+
+.buttonTest {
+    background-color: deepskyblue;
+    color: white;
+    padding: 10px 32px;
+    text-align: center;
+    font-size: 19px;
+    margin: 5px 5px 5px 5px;
+    text-decoration: none;
+}
 
 .screensaver {
     display: none;
@@ -139,6 +169,9 @@
     color: white;
 }
 
+#corrAns {
+    background-color: white;
+}
 
 
 @font-face {

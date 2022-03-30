@@ -134,143 +134,87 @@
         <div id="stop" onclick="stopTimer()">СТОП</div>
     </div>
 
-    <div class="scoreTest" id="scoreTest">0/10</div>
-    <div class="test">
-        <div class="question">
-            <div class="textQ">Когда появился JavaScript?</div>
-            <div class="answers">
-                <input type="radio" id="a1" name="q1" value="0" />1995
+    <div class="fake">
+
+        <div class="test">
+            <div class="scoreTest" id="scoreTest">0/10</div>
+
+            <div class="question">
+                <div class="textQ">Объекты, отвечающие за то, что содержится на Web-странице в окне браузера,
+                    называются:
+                </div>
+                <div class="answers" id="ans1"><input type="radio" id="corrAns1" name="q1" value="1"/>клиентским</div>
+                <div class="answers" id="ans2"><input type="radio" name="q1"/>встроенным</div>
+                <div class="answers" id="ans3"><input type="radio" name="q1"/>пользовательским</div>
             </div>
-            <div class="answers"><input type="radio" id="a" name="q1" />1990</div>
-            <div class="answers"><input type="radio" id="a" name="q1" />1991</div>
-            <div class="answers"><input type="radio" id="a" name="q1" />1996</div>
-            <div class="buttonQ" onclick="testButt(1)">Ответить</div>
+
+            <div class="question">
+                <div class="textQ">JavaScript язык, используемый в:</div>
+                <div class="answers" id="ans4"><input type="radio" id="corrAns2" name="q2" value="1"/>веб-приложениях</div>
+                <div class="answers" id="ans5"><input type="radio" name="q2"/>ИИ</div>
+                <div class="answers" id="ans6"><input type="radio" name="q2"/>настройка сервера</div>
+            </div>
+
+            <div class="question">
+                <div class="textQ">Тип переменной в JavaScript:</div>
+                <div class="answers"><input type="radio" name="q3"/>int</div>
+                <div class="answers"><input type="radio" id="corrAns3" name="q3" value="1"/>let</div>
+                <div class="answers"><input type="radio" name="q3"/>char</div>
+            </div>
+
+            <div class="question">
+                <div class="textQ">Что обозначает знак &&:</div>
+                <div class="answers"><input type="radio" name="q4"/>умножение</div>
+                <div class="answers"><input type="radio" id="corrAns4" name="q4" value="1"/>логическое И</div>
+                <div class="answers"><input type="radio" name="q4"/>логическое ИЛИ</div>
+            </div>
+
+            <div class="question">
+                <div class="textQ">Запуск всплывающего окна:</div>
+                <div class="answers"><input type="radio" name="q5"/>info("Hi")</div>
+                <div class="answers"><input type="radio" id="corrAns5" name="q5" value="1"/>alert("Hi")</div>
+                <div class="answers"><input type="radio" name="q5"/>new alert ("Hi")</div>
+            </div>
+
+            <div class="question">
+                <div class="textQ">Выберите примитив из списка:</div>
+                <div class="answers"><input type="radio" id="corrAns6" name="q6" value="1"/>null</div>
+                <div class="answers"><input type="radio" name="q6"/>Array</div>
+                <div class="answers"><input type="radio" name="q6"/>Nan</div>
+            </div>
+
+            <div class="question">
+                <div class="textQ">Директива const означает:</div>
+                <div class="answers"><input type="radio" name="q7"/>область видимости</div>
+                <div class="answers"><input type="radio" id="corrAns7" name="q7" value="1"/>неизменямость</div>
+                <div class="answers"><input type="radio" name="q7"/>шрифт</div>
+            </div>
+
+            <div class="question">
+                <div class="textQ">Можно ли в скрипте перевести посетителя на другую страницу сайта:</div>
+                <div class="answers"><input type="radio" name="q8"/>да, но только в рамках текущего сайта</div>
+                <div class="answers"><input type="radio" name="q8"/>нет, нельзя</div>
+                <div class="answers"><input type="radio" id="corrAns8" name="q8" value="1"/>да, куда угодно</div>
+            </div>
+
+            <div class="question">
+                <div class="textQ">У какой директивы больше видимость:</div>
+                <div class="answers"><input type="radio" id="corrAns9" name="q9" value="1"/>var</div>
+                <div class="answers"><input type="radio" name="q9"/>let</div>
+                <div class="answers"><input type="radio" name="q9"/>int</div>
+            </div>
+
+            <div class="question">
+                <div class="textQ">Какой оператор служит для создания нового экземпляра из класса однотипных объектов:
+                </div>
+                <div class="answers"><input type="radio" name="q10"/>this</div>
+                <div class="answers"><input type="radio" id="corrAns10" name="q10" value="1"/>prototype</div>
+                <div class="answers"><input type="radio" name="q10"/>var</div>
+            </div>
+            <div class="buttonTest" onclick="checkTest()">Проверить ответы</div>
         </div>
-        <div class="question">
-            <div class="textQ">JavaScript язык, используемый в ...</div>
-            <div class="answers">
-                <input type="radio" id="a2" name="q2" value="0" />веб-приложениях
-            </div>
-            <div class="answers">
-                <input type="radio" id="a" name="q2" />базах данных
-            </div>
-            <div class="answers"><input type="radio" id="a" name="q2" />ИИ</div>
-            <div class="answers">
-                <input type="radio" id="a" name="q2" />настройка сервера
-            </div>
-            <div class="buttonQ" onclick="testButt(2)">Ответить</div>
-        </div>
-        <div class="question">
-            <div class="textQ">Тип переменной в JavaScript</div>
-            <div class="answers"><input type="radio" id="a" name="q3" />int</div>
-            <div class="answers">
-                <input type="radio" id="a3" name="q3" value="0" />let
-            </div>
-            <div class="answers"><input type="radio" id="a" name="q3" />char</div>
-            <div class="answers">
-                <input type="radio" id="a" name="q3" />ArrayList
-            </div>
-            <div class="buttonQ" onclick="testButt(3)">Ответить</div>
-        </div>
-        <div class="question">
-            <div class="textQ">Что обозначает знак: &&</div>
-            <div class="answers">
-                <input type="radio" id="a" name="q4" />умножение
-            </div>
-            <div class="answers">
-                <input type="radio" id="a4" name="q4" value="0" />логическое И
-            </div>
-            <div class="answers">
-                <input type="radio" id="a" name="q4" />логическое ИЛИ
-            </div>
-            <div class="answers"><input type="radio" id="a" name="q4" />ошибку</div>
-            <div class="buttonQ" onclick="testButt(4)">Ответить</div>
-        </div>
-        <div class="question">
-            <div class="textQ">Запуск всплывающего окна:</div>
-            <div class="answers">
-                <input type="radio" id="a" name="q5" />нет варианта
-            </div>
-            <div class="answers">
-                <input type="radio" id="a" name="q5" />info("Hi")
-            </div>
-            <div class="answers">
-                <input type="radio" id="a5" name="q5" value="0" />alert("Hi")
-            </div>
-            <div class="answers">
-                <input type="radio" id="a" name="q5" />new alert ("Hi")
-            </div>
-            <div class="buttonQ" onclick="testButt(5)">Ответить</div>
-        </div>
-        <div class="question">
-            <div class="textQ">Выберите примитив из списка</div>
-            <div class="answers">
-                <input type="radio" id="a6" name="q6" value="0" />null
-            </div>
-            <div class="answers"><input type="radio" id="a" name="q6" />length</div>
-            <div class="answers"><input type="radio" id="a" name="q6" />Array</div>
-            <div class="answers"><input type="radio" id="a" name="q6" />Nan</div>
-            <div class="buttonQ" onclick="testButt(6)">Ответить</div>
-        </div>
-        <div class="question">
-            <div class="textQ">Директива const означает</div>
-            <div class="answers">
-                <input type="radio" id="a" name="q7" />область видимости
-            </div>
-            <div class="answers">
-                <input type="radio" id="a7" name="q7" value="0" />неизменямость
-            </div>
-            <div class="answers"><input type="radio" id="a" name="q7" />цвет</div>
-            <div class="answers"><input type="radio" id="a" name="q7" />шрифт</div>
-            <div class="buttonQ" onclick="testButt(7)">Ответить</div>
-        </div>
-        <div class="question">
-            <div class="textQ">Как обозначается ложное значение?</div>
-            <div class="answers"><input type="radio" id="a" name="q8" />Null</div>
-            <div class="answers"><input type="radio" id="a" name="q8" />Error</div>
-            <div class="answers">
-                <input type="radio" id="a8" name="q8" value="0" />Nan
-            </div>
-            <div class="answers">
-                <input type="radio" id="a" name="q8" />undefind
-            </div>
-            <div class="buttonQ" onclick="testButt(8)">Ответить</div>
-        </div>
-        <div class="question">
-            <div class="textQ">У какой директивы больше видимость?</div>
-            <div class="answers">
-                <input type="radio" id="a9" name="q9" value="0" />var
-            </div>
-            <div class="answers">
-                <input type="radio" id="a" name="q9" />let
-            </div>
-            <div class="buttonQ" onclick="testButt(9)">Ответить</div>
-        </div>
-        <div class="question">
-            <div class="textQ">Как у тебя дела?</div>
-            <div class="answers">
-                <input type="radio" id="a" name="q10" />Хорошо
-            </div>
-            <div class="answers">
-                <input type="radio" id="a" name="q10" />Плохо
-            </div>
-            <div class="answers">
-                <input type="radio" id="a10" name="q10" value="0" />Отлично
-            </div>
-            <div class="answers">
-                <input type="radio" id="a" name="q10" />Нормально
-            </div>
-            <div class="buttonQ" onclick="testButt(10)">Ответить</div>
-        </div>
+
     </div>
-    <div class="end"></div>
-
-
-
-
-
-
-
 
     <div class="screensaver" id="screensaver">
         <div id="userName"></div>
