@@ -141,6 +141,10 @@
     border-left: solid;
     border-right: solid;
 }
+#lastQuestion {
+    border-bottom: solid;
+}
+
 .textQ {
     font-weight: bold;
 }
