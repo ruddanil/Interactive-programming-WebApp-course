@@ -95,28 +95,38 @@
     background-color: coral;
     cursor: pointer;
 }
-
 .timer {
     display: none;
     font-size: 20px;
     justify-content: center;
 }
 
+.timers {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.timerButtons {
+    display: flex;
+}
+
 .time {
     font-size: 45px;
-    width: 65px;
     text-align: center;
 }
-#start, #stop {
+#start, #stop, #set {
     color: black;
     padding: 10px 32px;
     font-size: 25px;
+    border: solid;
+    text-align: center;
 }
 #start:hover,
-#stop:hover {
+#stop:hover,
+#set {
     cursor: pointer;
 }
-.fake {
+.tests {
     display: flex;
     justify-content: center;
 }

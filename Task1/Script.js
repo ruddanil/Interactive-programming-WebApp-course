@@ -88,102 +88,66 @@ const example3 = () => {
 };
 
 const example4 = () => {
-    let timer = document.getElementById("timer");
+    let timer = document.getElementById("timerID");
     timer.style.display = "flex";
 };
 
 
-// let time = document.getElementById("time");
-// let pause = false;
-// let sec = 0;
-// let min = 0;
-// let pauseTime;
-//
-// const timerLogic = () => {
-//     let seconds = parseInt(prompt("Введите количество секунд: "), 10);
-//     let minutes = 0;
-//     while (isNaN(seconds) || seconds <= 0) {
-//         alert("Некорректные данные");
-//         seconds = parseInt(prompt("Введите количество секунд: "), 10);
-//     }
-//     if(seconds >= 60*60) {
-//         minutes = 60*60/seconds;
-//     }
-//     if (!pause) {
-//         sec--;
-//         if (sec < 10) sec = "0" + sec;
-//         if (sec == 60) {
-//             min++;
-//             sec = 0;
-//         }
-//         time.innerHTML = min + ":" + sec;
-//     } else {
-//         return;
-//     }
-// };
-// const startTimer = () => {
-//     sec = 0;
-//     min = 0;
-//     pause = false;
-//     clearInterval(pauseTime);
-//     pauseTime = setInterval(timerLogic, 1000);
-// };
-// const stopTimer = () => {
-//     pause = true;
-//     clearInterval(pauseTime);
-// };
-let count4 = 0;
-const timer = () => {
-    if(count4==0){
+let timeAll = document.getElementById("timeAll");
+let timePass = document.getElementById("timePass");
+let pause = true;
+let pauseTime;
+let allSeconds;
+let secondsPass;
+let minutesPass;
+let hourPass;
+const timerLogic = () => {
+    allSeconds--;
+    secondsPass++;
+    let seconds = allSeconds % 60;
+    let minutes = allSeconds / 60 % 60;
+    let hour = allSeconds / 60 / 60 % 60;
 
-        document.getElementById("text").style.display = "inline";
-        document.getElementById("b7").style.display = "inline";
-        document.getElementById("b8").style.display = "inline";
-        document.getElementById("time").style.display = "block";
-        document.getElementById("timer").style.display = "block";
-        let buttonRun = document.getElementById("b7")
-        let buttonStop = document.getElementById("b8")
-        let timerShow = document.getElementById("time");
-
-        function Timer(){
-            var timerInput = document.getElementById("text");
-            timerInput.value = parseInt(timerInput.value)-1;
-            var seconds = timerInput.value%60;
-            var minutes = timerInput.value/60%60;
-            var hour = timerInput.value/60/60%60;
-            if (timerInput.value <= 0) {
-                window.clearInterval(window.TimerId);
-                alert("Время закончилось");
-            } else {
-                let strTimer = `${Math.trunc(hour)}:${Math.trunc(minutes)}:${seconds}`;
-                timerShow.innerHTML = strTimer;
-            }
-
-        }
-
-        buttonRun.onclick =  function() {
-            window.TimerId = window.setInterval(Timer, 1000);
-        }
-
-        buttonStop.onclick =  function() {
-            window.clearInterval(window.TimerId);
-        }
-
-        count4 = 1;
-
+    timeAll.innerHTML = `${Math.trunc(hour)}:${Math.trunc(minutes)}:${seconds}`;
+    if (allSeconds <= 0) {
+        stopTimer();
+        pause = true;
+        alert("Время закончилось");
     }
-
-    else{
-
-        document.getElementById("text").style.display = "none";
-        document.getElementById("b7").style.display = "none";
-        document.getElementById("b8").style.display = "none";
-        document.getElementById("time").style.display = "none";
-        document.getElementById("timer").style.display = "none";
-        count4 = 0;
-
+    if (!pause) {
+        if (secondsPass < 10) secondsPass = secondsPass;
+        if (secondsPass == 60) {
+            minutesPass++;
+            secondsPass = 0;
+        }
+        if (minutesPass == 60) {
+            hourPass++;
+            minutesPass = 0;
+        }
     }
-
+    timePass.innerHTML = hourPass + ":" + minutesPass + ":" + secondsPass;
+};
+const setTimer = () => {
+    allSeconds = parseInt(prompt("Введите количество секунд: "), 10);
+    if (isNaN(allSeconds) || allSeconds <= 0) {
+        alert("Некорректные данные");
+    }
+    let seconds = allSeconds % 60;
+    let minutes = allSeconds / 60 % 60;
+    let hour = allSeconds / 60 / 60 % 60;
+    timeAll.innerHTML = `${Math.trunc(hour)}:${Math.trunc(minutes)}:${seconds}`;
+    secondsPass = 0;
+    minutesPass = 0;
+    hourPass = 0;
+}
+const startTimer = () => {
+    pause = false;
+    clearInterval(pauseTime);
+    pauseTime = setInterval(timerLogic, 1000);
+};
+const stopTimer = () => {
+    pause = true;
+    clearInterval(pauseTime);
 };
 
 let opac = 0;

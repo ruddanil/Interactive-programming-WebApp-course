@@ -68,7 +68,7 @@
             </div>
             <div class="text_but" id="ex1">
                 <div class="text-ex">
-                    parseInt(), prompt(), alert()
+                    parseInt(), prompt(), alert() и другие
                 </div>
                 <div class="button" onclick="example1()">
                     Запустить
@@ -81,7 +81,7 @@
             </div>
             <div class="text_but" id="ex2">
                 <div class="text-ex">
-                    prompt(), alert()
+                    prompt(), alert(), parseInt() и другие
                 </div>
                 <div class="button" onclick="example2()">
                     Запустить
@@ -107,7 +107,7 @@
             </div>
             <div class="text_but" id="ex4">
                 <div class="text-ex">
-                    Таймер с заданным функционалом
+                    Math.trunc(), setInterval(), clearInterval()
                 </div>
                 <div class="button" onclick="example4()">
                     Запустить
@@ -120,7 +120,7 @@
             </div>
             <div class="text_but" id="ex5">
                 <div class="text-ex">
-                    Таймер с заданным функционалом
+                    sessionStorage, addEventListener()
                 </div>
                 <div class="button" onclick="example5()">
                     Запустить
@@ -128,17 +128,24 @@
             </div>
         </div>
     </div>
-    <div class="timer" id="timer">
-        <div id="start" onclick="startTimer()">СТАРТ</div>
-        <div class="time" id="time">0:0</div>
-        <div id="stop" onclick="stopTimer()">СТОП</div>
+    <div class="timer" id="timerID">
+        <div id="timerLogic">
+            <div class="timerButtons">
+                <div id="set" onclick="setTimer()">Установить таймер</div>
+            </div>
+            <div class="timers">
+                <div class="time" id="timeAll">0:0:0</div>
+                <div class="time" id="timePass">0:0:0</div>
+            </div>
+            <div class="timerButtons">
+                <div id="start" onclick="startTimer()">СТАРТ</div>
+                <div id="stop" onclick="stopTimer()">СТОП</div>
+            </div>
+        </div>
     </div>
-
-    <div class="fake">
-
+    <div class="tests">
         <div class="test">
             <div class="scoreTest" id="scoreTest">0/10</div>
-
             <div class="question">
                 <div class="textQ">Объекты, отвечающие за то, что содержится на Web-странице в окне браузера,
                     называются:
@@ -150,7 +157,8 @@
 
             <div class="question">
                 <div class="textQ">JavaScript язык, используемый в:</div>
-                <div class="answers" id="ans4"><input type="radio" id="corrAns2" name="q2" value="1"/>веб-приложениях</div>
+                <div class="answers" id="ans4"><input type="radio" id="corrAns2" name="q2" value="1"/>веб-приложениях
+                </div>
                 <div class="answers" id="ans5"><input type="radio" name="q2"/>ИИ</div>
                 <div class="answers" id="ans6"><input type="radio" name="q2"/>настройка сервера</div>
             </div>
@@ -215,7 +223,6 @@
         </div>
 
     </div>
-
     <div class="screensaver" id="screensaver">
         <div id="userName"></div>
         <div id="currentDate"></div>
