@@ -116,13 +116,65 @@
         </div>
         <div class="ex" id="exC5">
             <div class="subheader-ex" onclick="openEx5()">
-                Появляющаяся заставка
+                Тест по JavaScript с проверкой
             </div>
             <div class="text_but" id="ex5">
                 <div class="text-ex">
-                    sessionStorage, addEventListener()
+                    Math.trunc(), setInterval(), clearInterval()
                 </div>
                 <div class="button" onclick="example5()">
+                    Запустить
+                </div>
+            </div>
+        </div>
+        <div class="ex" id="exC6">
+            <div class="subheader-ex" onclick="openEx6()">
+                Появляющаяся заставка
+            </div>
+            <div class="text_but" id="ex6">
+                <div class="text-ex">
+                    sessionStorage, addEventListener()
+                </div>
+                <div class="button" onclick="example6()">
+                    Запустить
+                </div>
+            </div>
+        </div>
+        <div class="ex" id="exC21">
+            <div class="subheader-ex" onclick="openEx21()">
+                Самая длинная строка
+            </div>
+            <div class="text_but" id="ex21">
+                <div class="text-ex">
+                    sessionStorage, addEventListener()
+                </div>
+                <div class="button" onclick="example21()">
+                    Запустить
+                </div>
+            </div>
+        </div>
+        <div class="ex" id="exC22">
+            <div class="subheader-ex" onclick="openEx22()">
+                Самый частый символ в строке
+            </div>
+            <div class="text_but" id="ex22">
+                <div class="text-ex">
+                    sessionStorage, addEventListener()
+                </div>
+                <div class="button" onclick="example22()">
+                    Запустить
+                </div>
+            </div>
+        </div>
+        <div class="ex" id="exC24">
+            <div class="subheader-ex" onclick="openEx24()">
+                Проверка на анаграмму
+            </div>
+            <div class="text_but" id="ex24">
+                <div class="text-ex">
+                    sessionStorage, addEventListener()
+                </div>
+                <div class="button" onclick="example24()">
                     Запустить
                 </div>
             </div>
@@ -143,7 +195,7 @@
             </div>
         </div>
     </div>
-    <div class="tests">
+    <div class="tests" id="testsID">
         <div class="test">
             <div class="scoreTest" id="scoreTest">0/10</div>
             <div class="question">
@@ -221,7 +273,6 @@
             </div>
             <div class="buttonTest" onclick="checkTest()">Проверить ответы</div>
         </div>
-
     </div>
     <div class="screensaver" id="screensaver">
         <div id="userName"></div>

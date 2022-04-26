@@ -40,6 +40,34 @@ const openEx5 = () => {
     let description1 = document.getElementById("exC5");
     description1.style.border = "solid";
 }
+const openEx6 = () => {
+    let description = document.getElementById("ex6");
+    description.style.display = "flex";
+    description.style.borderTop = "solid";
+    let description1 = document.getElementById("exC6");
+    description1.style.border = "solid";
+}
+const openEx21 = () => {
+    let description = document.getElementById("ex21");
+    description.style.display = "flex";
+    description.style.borderTop = "solid";
+    let description1 = document.getElementById("exC21");
+    description1.style.border = "solid";
+}
+const openEx22 = () => {
+    let description = document.getElementById("ex22");
+    description.style.display = "flex";
+    description.style.borderTop = "solid";
+    let description1 = document.getElementById("exC22");
+    description1.style.border = "solid";
+}
+const openEx24 = () => {
+    let description = document.getElementById("ex24");
+    description.style.display = "flex";
+    description.style.borderTop = "solid";
+    let description1 = document.getElementById("exC24");
+    description1.style.border = "solid";
+}
 
 const example0 = () => {
     let name = prompt("Введите ваше имя:");
@@ -50,7 +78,6 @@ const example0 = () => {
     sessionStorage.setItem("name", name);
     alert("Здравствуйте, " + sessionStorage.getItem("name") + "!");
 };
-
 const example1 = () => {
     let base = parseInt(prompt("Введите длину основания треугольника: "), 10);
     while (isNaN(base) || base <= 0) {
@@ -65,7 +92,6 @@ const example1 = () => {
     let res = (base * height) / 2;
     alert("Площадь треугольника: " + res);
 };
-
 const example2 = () => {
     let str1 = prompt("Введите первую строку");
     let str2 = prompt("Введите вторую строку");
@@ -73,7 +99,6 @@ const example2 = () => {
         alert("Строки одинаковой длины");
     } else alert("Строки разной длины");
 };
-
 const example3 = () => {
     let mas = [];
     for (let i = 0; i < 5; i++) {
@@ -86,12 +111,14 @@ const example3 = () => {
     }
     alert("Максимальное число: " + Math.max(...mas) + ", Минимальное число: " + Math.min(...mas));
 };
-
 const example4 = () => {
     let timer = document.getElementById("timerID");
     timer.style.display = "flex";
 };
-
+const example5 = () => {
+    let tests = document.getElementById("testsID");
+    tests.style.display = "flex";
+};
 
 let timeAll = document.getElementById("timeAll");
 let timePass = document.getElementById("timePass");
@@ -115,7 +142,6 @@ const timerLogic = () => {
         alert("Время закончилось");
     }
     if (!pause) {
-        if (secondsPass < 10) secondsPass = secondsPass;
         if (secondsPass == 60) {
             minutesPass++;
             secondsPass = 0;
@@ -149,10 +175,9 @@ const stopTimer = () => {
     pause = true;
     clearInterval(pauseTime);
 };
-
 let opac = 0;
 k = 100;
-const example5 = () => {
+const example6 = () => {
     let img = document.getElementById("screensaver");
     img.style.display = "block";
     let placeName = document.getElementById("userName");
@@ -207,4 +232,47 @@ const checkTest = () => {
     }
 
     scorePlace.innerText = "Результат: " + score + "/10";
+};
+
+const example21 = () => {
+    let mas = [];
+    let maxString = "";
+    for (let i = 0; i < 3; i++) {
+        mas.push(prompt("Введите строку " + (i + 1)));
+    }
+    for (let i = 0; i < mas.length; i++) {
+        if (mas[i].length > maxString.length) {
+            maxString = mas[i]
+        }
+    }
+    alert("Самая длинная строка: " + maxString);
+};
+const example22 = () => {
+    let charMap = {}
+    let maxCharValue = 0
+    let maxChar = ""
+    let newChar = ""
+    let str = prompt("Введите строку")
+
+    for (let char of str) {
+        if (charMap.hasOwnProperty(char)) {
+            charMap[char]++
+        } else {
+            charMap[char] = 1
+        }
+    }
+    for (let char in charMap) {
+        if (charMap[char] > maxCharValue) {
+            maxCharValue = charMap[char]
+            maxChar = char
+        }
+    }
+    alert("Самый частый символ: " + maxChar)
+    newChar = prompt("Введите новый символ")
+    alert(str.replaceAll(maxChar, newChar))
+};
+const example24 = () => {
+    let fStr = prompt("Введите первое слово").toLowerCase().split("").sort().join("")
+    let sStr = prompt("Введите второе слово").toLowerCase().split("").sort().join("")
+    alert(fStr === sStr)
 };
